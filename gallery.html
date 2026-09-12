@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kgosi Architects | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/kgosi-logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <img src="images/kgosi-logo.png" alt="Kgosi Architects">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+    <section class="gallery-hero">
+        <p class="section-label">FEATURED WORK</p>
+        <h1>Architecture with <span>purpose.</span></h1>
+        <p>
+            A selection of projects shaped by context, function
+            and thoughtful design.
+        </p>
+    </section>
+
+    
+<section class="gallery-section">
+
+    <div class="project-filters">
+        <button class="filter active" data-category="all">All</button>
+        <button class="filter" data-category="residential">Residential</button>
+        <button class="filter" data-category="commercial">Commercial</button>
+        <button class="filter" data-category="hospitality">Hospitality</button>
+        <button class="filter" data-category="industrial">Industrial</button>
+    </div>
+
+    <div class="project-carousel">
+
+        <article class="gallery-project active" data-category="residential">
+
+            <div class="project-image">
+                <img src="images/project1.png" alt="Morula House">
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-title">
+                    <h2>Morula House</h2>
+                    <p>
+                        A contemporary residence designed around light, privacy and connection to the outdoors.
+                    </p>
+                </div>
+
+                <div class="project-story">
+
+                    <div>
+                        <span>Brief</span>
+                        <p>
+                            "Create a modern family home with generous communal spaces and quieter private areas."
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>Challenge</span>
+                        <p>
+                            Balancing openness and natural light with privacy from the surrounding properties.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>Result</span>
+                        <p>
+                            A restrained residence organised around proportion, light and indoor-outdoor living.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="gallery-project" data-category="commercial">
+
+            <div class="project-image">
+                <img src="images/project2.png" alt="Kgosi Office">
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-title">
+                    <h2>Kgosi Office</h2>
+                    <p>
+                        A contemporary workplace focused on clarity, collaboration and a strong sense of arrival.
+                    </p>
+                </div>
+
+                <div class="project-story">
+
+                    <div>
+                        <span>Brief</span>
+                        <p>
+                            "Develop a professional workplace that supports both focused work and collaboration."
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>Challenge</span>
+                        <p>
+                            Creating distinct working zones without making the relatively compact space feel closed.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>Result</span>
+                        <p>
+                            An efficient workplace with clear circulation, generous daylight and a calm material palette.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="gallery-project" data-category="residential">
+
+            <div class="project-image">
+                <img src="images/gallery3.png" alt="Metsi Residence">
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-title">
+                    <h2>Metsi Residence</h2>
+                    <p>
+                        A quiet contemporary home where simple forms create a strong relationship with the landscape.
+                    </p>
+                </div>
+
+                <div class="project-story">
+
+                    <div>
+                        <span>Brief</span>
+                        <p>
+                            "Create a comfortable family residence that feels connected to its natural surroundings."
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>Challenge</span>
+                        <p>
+                            Working with the site's orientation while maintaining privacy and outdoor connection.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>Result</span>
+                        <p>
+                            A balanced composition of solid and open spaces that brings landscape into everyday living.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <div class="carousel-controls">
+            <button class="carousel-arrow prev" aria-label="Previous project">←</button>
+            <span class="carousel-count">01 / 03</span>
+            <button class="carousel-arrow next" aria-label="Next project">→</button>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- CTA-->
+
+<section class="about-closing">
+
+    <div class="closing-inner">
+        <p class="section-label">LET'S CREATE SOMETHING CONSIDERED</p>
+
+        <h2>
+            Have a project
+            <br>
+            <span>in mind?</span>
+        </h2>
+
+        <a href="contact.html" class="outline-button">
+            Start a Conversation
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Kgosi Architects. All Rights Reserved.</p>
+    <p>Architecture • Design • Space</p>
+</footer>
+
+
+<script>
+const projects = document.querySelectorAll('.gallery-project');
+const filters = document.querySelectorAll('.filter');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+const count = document.querySelector('.carousel-count');
+
+let current = 0;
+
+function updateFilters() {
+    const category = projects[current].dataset.category;
+
+    filters.forEach(filter => {
+        filter.classList.toggle(
+            'active',
+            filter.dataset.category === 'all' ||
+            filter.dataset.category === category
+        );
+    });
+}
+
+function showProject(index) {
+    projects[current].classList.remove('active');
+
+    current = (index + projects.length) % projects.length;
+
+    projects[current].classList.add('active');
+    count.textContent = `0${current + 1} / 0${projects.length}`;
+
+    updateFilters();
+}
+
+next.addEventListener('click', () => {
+    showProject(current + 1);
+});
+
+prev.addEventListener('click', () => {
+    showProject(current - 1);
+});
+
+updateFilters();
+</script>
+
+
+</body>
+</html>
