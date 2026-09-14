@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Kgosi Architects - Settings</title>
+    <link rel="stylesheet" href="kgosi.css">
+</head>
+<body class="admin-body">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+        <!-- ================= BRAND ================= -->
+        <div class="admin-brand">
+            <img
+                src="images/kgosi-logo.png"
+                alt="Kgosi Architects Logo"
+            >
+            <div>
+                <h2>Kgosi Architects</h2>
+                <span>Admin Portal</span>
+            </div>
+        </div>
+        <!-- ================= NAVIGATION ================= -->
+        <nav class="admin-nav">
+            <a href="dashboard.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="projects.html">
+                <span>▣</span>
+                Projects
+            </a>
+
+            <a href="inquiries.html">
+                <span>✉</span>
+                Inquiries
+            </a>
+
+            <a href="settings.html" class="active">
+                <span>⚙</span>
+                Settings
+            </a>
+        </nav>
+        <!-- ================= SIDEBAR BOTTOM ================= -->
+        <div class="sidebar-bottom">
+            <a href="index.html">
+                <span>↗</span>
+                View Website
+            </a>
+            <a href="login.html" class="logout">
+                <span>⇥</span>
+                Logout
+            </a>
+        </div>
+    </aside>
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="settings-main">
+        <!-- ================= PAGE HEADER ================= -->
+        <header class="settings-header">
+
+            <div>
+                <p class="page-label">
+                    ADMINISTRATION
+                </p>
+                <h1>
+                    Settings
+                </h1>
+                <p class="settings-description">
+                    Manage your admin profile, website information
+                    and account preferences.
+                </p>
+            </div>
+        </header>
+        <!-- =================================================
+             ADMIN PROFILE
+             ================================================= -->
+        <section class="settings-card">
+            <div class="settings-card-heading">
+                <div>
+                    <h2>
+                        Admin Profile
+                    </h2>
+                    <p>
+                        Manage the administrator account information.
+                    </p>
+                </div>
+            </div>
+            <div class="settings-form">
+                <div class="settings-form-row">
+                    <!-- ADMIN NAME -->
+                    <div class="settings-form-group">
+                        <label for="adminName">
+                            Full Name
+                        </label>
+                        <input
+                            type="text"
+                            id="adminName"
+                            name="adminName"
+                            value="Kgosi Admin"
+                        >
+                    </div>
+                    <!-- ADMIN EMAIL -->
+                    <div class="settings-form-group">
+                        <label for="adminEmail">
+                            Email Address
+                        </label>
+                        <input
+                            type="email"
+                            id="adminEmail"
+                            name="adminEmail"
+                            value="admin@kgosiarchitects.com"
+                        >
+                    </div>
+                </div>
+                <!-- PHONE -->
+                <div class="settings-form-group">
+                    <label for="adminPhone">
+                        Phone Number
+                    </label>
+                    <input
+                        type="tel"
+                        id="adminPhone"
+                        name="adminPhone"
+                        placeholder="+267 XX XXX XXX"
+                    >
+
+                </div>
+
+            </div>
+            <div class="settings-card-footer">
+                <button
+                    type="button"
+                    class="primary-button"
+                >
+                    Save Profile
+                </button>
+            </div>
+        </section>
+        <!-- =================================================
+             WEBSITE INFORMATION
+             ================================================= -->
+        <section class="settings-card">
+            <div class="settings-card-heading">
+                <div>
+                    <h2>
+                        Website Information
+                    </h2>
+                    <p>
+                        Update the information displayed on the
+                        Kgosi Architects website.
+                    </p>
+                </div>
+            </div>
+
+            <div class="settings-form">
+                <!-- COMPANY NAME -->
+                <div class="settings-form-group">
+                    <label for="companyName">
+                        Company Name
+                    </label>
+                    <input
+                        type="text"
+                        id="companyName"
+                        name="companyName"
+                        value="Kgosi Architects"
+                    >
+                </div>
+
+                <!-- COMPANY EMAIL -->
+                <div class="settings-form-row">
+                    <div class="settings-form-group">
+                        <label for="companyEmail">
+                            Business Email
+                        </label>
+                        <input
+                            type="email"
+                            id="companyEmail"
+                            name="companyEmail"
+                            value="info@kgosiarchitects.com"
+                        >
+
+                    </div>
+
+                    <div class="settings-form-group">
+                        <label for="companyPhone">
+                            Business Phone
+                        </label>
+                        <input
+                            type="tel"
+                            id="companyPhone"
+                            name="companyPhone"
+                            placeholder="+267 XX XXX XXX"
+                        >
+                    </div>
+
+                </div>
+                <!-- LOCATION -->
+                <div class="settings-form-group">
+                    <label for="companyLocation">
+                        Office Location
+                    </label>
+                    <input
+                        type="text"
+                        id="companyLocation"
+                        name="companyLocation"
+                        value="Gaborone, Botswana"
+                    >
+                </div>
+                <!-- DESCRIPTION -->
+                <div class="settings-form-group">
+                    <label for="companyDescription">
+                        Website Description
+                    </label>
+                    <textarea
+                        id="companyDescription"
+                        name="companyDescription"
+                        rows="4"
+                        placeholder="Enter a short description about Kgosi Architects..."
+                    >Creating thoughtful architectural spaces through innovative design, functionality and excellence.</textarea>
+                </div>
+            </div>
+            <div class="settings-card-footer">
+                <button
+                    type="button"
+                    class="primary-button"
+                >
+                    Save Website Information
+                </button>
+            </div>
+        </section>
+        <!-- =================================================
+             NOTIFICATIONS
+             ================================================= -->
+        <section class="settings-card">
+            <div class="settings-card-heading">
+                <div>
+                    <h2>
+                        Notifications
+                    </h2>
+                    <p>
+                        Choose which notifications you would like
+                        to receive.
+                    </p>
+                </div>
+            </div>
+            <div class="notification-settings">
+                <!-- NEW INQUIRIES -->
+                <div class="notification-option">
+                    <div>
+                        <strong>
+                            New Client Inquiries
+                        </strong>
+                        <span>
+                            Receive a notification when a new
+                            inquiry is submitted.
+                        </span>
+                    </div>
+                    <label class="toggle">
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <!-- PROJECT UPDATES -->
+                <div class="notification-option">
+                    <div>
+                        <strong>
+                            Project Updates
+                        </strong>
+                        <span>
+                            Receive notifications about project
+                            changes and updates.
+                        </span>
+                    </div>
+                    <label class="toggle">
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <!-- SYSTEM NOTIFICATIONS -->
+                <div class="notification-option">
+                    <div>
+                        <strong>
+                            System Notifications
+                        </strong>
+                        <span>
+                            Receive important administrator and
+                            system notifications.
+                        </span>
+                    </div>
+                    <label class="toggle">
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+        <!-- =================================================
+             SECURITY
+             ================================================= -->
+        <section class="settings-card">
+            <div class="settings-card-heading">
+                <div>
+                    <h2>
+                        Security
+                    </h2>
+                    <p>
+                        Update your administrator account password.
+                    </p>
+                </div>
+            </div>
+            <div class="settings-form">
+                <!-- CURRENT PASSWORD -->
+                <div class="settings-form-group">
+                    <label for="currentPassword">
+                        Current Password
+                    </label>
+                    <input
+                        type="password"
+                        id="currentPassword"
+                        name="currentPassword"
+                        placeholder="Enter current password"
+                    >
+                </div>
+                <!-- NEW PASSWORD -->
+                <div class="settings-form-row">
+                    <div class="settings-form-group">
+                        <label for="newPassword">
+                            New Password
+                        </label>
+                        <input
+                            type="password"
+                            id="newPassword"
+                            name="newPassword"
+                            placeholder="Enter new password"
+                        >
+                    </div>
+                    <div class="settings-form-group">
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm new password"
+                        >
+                    </div>
+
+                </div>
+            </div>
+            <div class="settings-card-footer">
+                <button
+                    type="button"
+                    class="secondary-button"
+                >
+                    Change Password
+                </button>
+            </div>
+        </section>
+        <!-- =================================================
+             WEBSITE STATUS
+             ================================================= -->
+        <section class="settings-card">
+            <div class="settings-card-heading">
+                <div>
+                    <h2>
+                        Website Status
+                    </h2>
+                    <p>
+                        Control whether the public Kgosi Architects
+                        website is available to visitors.
+                    </p>
+                </div>
+            </div>
+            <div class="website-status">
+                <div class="website-status-indicator">
+                    <span class="online-dot"></span>
+                    <div>
+                        <strong>
+                            Website Online
+                        </strong>
+                        <span>
+                            Your website is currently visible
+                            to visitors.
+                        </span>
+                    </div>
+                </div>
+                <button
+                    type="button"
+                    class="secondary-button"
+                >
+                    Maintenance Mode
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

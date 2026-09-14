@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kgosi Architects - Projects</title>
+    <link rel="stylesheet" href="kgosi.css">
+</head>
+<body class="admin-body">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+        <div class="admin-brand">
+            <img src="images/kgosi-logo.png" alt="Kgosi Architects Logo">
+            <div>
+                <h2>Kgosi Architects</h2>
+                <span>Admin Portal</span>
+            </div>
+        </div>
+        <nav class="admin-nav">
+            <a href="dashboard.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+            <a href="projects.html" class="active">
+                <span>▣</span>
+                Projects
+            </a>
+            <a href="inquiries.html">
+                <span>✉</span>
+                Inquiries
+            </a>
+            <a href="settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+        </nav>
+        <div class="sidebar-bottom">
+            <a href="index.html">
+                <span>↗</span>
+                View Website
+            </a>
+            <a href="login.html" class="logout">
+                <span>⇥</span>
+                Logout
+            </a>
+        </div>
+    </aside>
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="projects-main">
+        <!-- PAGE HEADER -->
+        <header class="projects-header">
+            <div>
+                <p class="page-label">PORTFOLIO MANAGEMENT</p>
+                <h1>Projects</h1>
+                <p class="projects-description">
+                    Manage the architectural projects displayed on your website.
+                </p>
+            </div>
+            <a href="add-project.html" class="primary-button">
+                + Add Project
+            </a>
+        </header>
+        <!-- ================= PROJECT CONTROLS ================= -->
+        <section class="project-controls">
+            <div class="project-search">
+                <label for="searchProject">Search Projects</label>
+                <input
+                    type="search"
+                    id="searchProject"
+                    placeholder="Search by project name..."
+                >
+            </div>
+            <div class="project-filter">
+                <label for="projectCategory">Category</label>
+                <select id="projectCategory">
+                    <option value="all">All Projects</option>
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="industrial">Industrial</option>
+                    <option value="renovation">Renovation</option>
+                </select>
+            </div>
+        </section>
+        <!-- ================= PROJECT COUNT ================= -->
+        <div class="projects-summary">
+            <div>
+                <strong>24</strong>
+                <span>Projects</span>
+            </div>
+            <div class="summary-line"></div>
+            <p>
+                Showing your latest architectural projects
+            </p>
+        </div>
+        <!-- ================= PROJECT TABLE ================= -->
+        <section class="projects-card">
+            <div class="projects-table-wrapper">
+                <table class="projects-table">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Category</th>
+                            <th>Location</th>
+                            <th>Year</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- PROJECT 1 -->
+                        <tr>
+                            <td>
+                                <div class="table-project">
+                                    <div class="table-project-image">
+                                        <img
+                                            src="images/project-placeholder.jpg"
+                                            alt="Modern Family Residence"
+                                        >
+                                    </div>
+                                    <div>
+                                        <h3>Modern Family Residence</h3>
+                                        <span>Residential architecture</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="category residential">
+                                    Residential
+                                </span>
+                            </td>
+                            <td>
+                                Gaborone
+                            </td>
+                            <td>
+                                2026
+                            </td>
+                            <td>
+                                <span class="project-status published">
+                                    Published
+                                </span>
+                            </td>
+                            <td>
+                                <div class="project-actions">
+                                    <a href="#" class="edit-button">
+                                        Edit
+                                    </a>
+                                    <button class="delete-button">
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- PROJECT 2 -->
+                        <tr>
+                            <td>
+                                <div class="table-project">
+                                    <div class="table-project-image">
+                                        <img
+                                            src="images/project-placeholder.jpg"
+                                            alt="Gaborone Office Complex"
+                                        >
+                                    </div>
+                                    <div>
+                                        <h3>Gaborone Office Complex</h3>
+                                        <span>Commercial architecture</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="category commercial">
+                                    Commercial
+                                </span>
+                            </td>
+                            <td>
+                                Gaborone
+                            </td>
+                            <td>
+                                2025
+                            </td>
+                            <td>
+                                <span class="project-status published">
+                                    Published
+                                </span>
+                            </td>
+                            <td>
+                                <div class="project-actions">
+                                    <a href="#" class="edit-button">
+                                        Edit
+                                    </a>
+                                    <button class="delete-button">
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- PROJECT 3 -->
+                        <tr>
+                            <td>
+                                <div class="table-project">
+                                    <div class="table-project-image">
+                                        <img
+                                            src="images/project-placeholder.jpg"
+                                            alt="Kgale Hill Residence"
+                                        >
+                                    </div>
+                                    <div>
+                                        <h3>Kgale Hill Residence</h3>
+                                        <span>Contemporary residence</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="category residential">
+                                    Residential
+                                </span>
+                            </td>
+                            <td>
+                                Kgale
+                            </td>
+                            <td>
+                                2025
+                            </td>
+                            <td>
+                                <span class="project-status published">
+                                    Published
+                                </span>
+                            </td>
+                            <td>
+                                <div class="project-actions">
+                                    <a href="#" class="edit-button">
+                                        Edit
+                                    </a>
+                                    <button class="delete-button">
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- PROJECT 4 -->
+                        <tr>
+                            <td>
+                                <div class="table-project">
+                                    <div class="table-project-image">
+                                    <img
+                                        src="images/project-placeholder.jpg"
+                                           alt="Commercial Development"
+                                        >
+                                    </div>
+                                    <div>
+                                        <h3>Central Business Development</h3>
+                                        <span>Commercial development</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="category commercial">
+                                    Commercial
+                                </span>
+                            </td>
+                            <td>
+                                Gaborone
+                            </td>
+
+                            <td>
+                                2024                            </td>
+
+                            <td>
+                                <span class="project-status draft">
+                                    Draft
+                                </span>
+                            </td>
+                            <td>
+                                <div class="project-actions">
+                                    <a href="#" class="edit-button">
+                                        Edit
+                                    </a>
+                                    <button class="delete-button">
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
