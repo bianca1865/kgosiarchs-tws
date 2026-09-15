@@ -18,9 +18,10 @@
 <!-- Navigation -->
 <header>
     <div class="logo">
-        <img src="images/kgosi-logo.png" alt="Kgosi Architects">
+        <a href="index.html">
+            <img src="images/kgosi-logo.png" alt="Kgosi Architects">
+        </a>
     </div>
-
     <nav>
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -145,6 +146,27 @@
     <p>© 2026 Kgosi Architects. All Rights Reserved.</p>
     <p>Architecture • Design • Space</p>
 </footer>
+
+<script>
+const sections = document.querySelectorAll(
+    '.hero, .intro, .projects, .cta'
+);
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+</script>
 
 </body>
 </html>

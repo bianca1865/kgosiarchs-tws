@@ -17,14 +17,16 @@
 
 <!-- Navigation -->
 <header>
-    <div class="logo">
-        <img src="images/kgosi-logo.png" alt="Kgosi Architects">
+      <div class="logo">
+        <a href="index.html">
+            <img src="images/kgosi-logo.png" alt="Kgosi Architects">
+        </a>
     </div>
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" class="active">Gallery</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
     </nav>
@@ -232,41 +234,192 @@ const prev = document.querySelector('.prev');
 const count = document.querySelector('.carousel-count');
 
 let current = 0;
+let currentCategory = 'all';
+let filteredProjects = Array.from(projects);
+let isAnimating = false;
 
-function updateFilters() {
-    const category = projects[current].dataset.category;
 
+/* Update project counter */
+function updateCounter() {
+    count.textContent =
+        `0${current + 1} / 0${filteredProjects.length}`;
+}
+
+
+/* Update active category button */
+function updateFilterButtons() {
     filters.forEach(filter => {
         filter.classList.toggle(
             'active',
-            filter.dataset.category === 'all' ||
-            filter.dataset.category === category
+            filter.dataset.category === currentCategory
         );
     });
 }
 
-function showProject(index) {
-    projects[current].classList.remove('active');
 
-    current = (index + projects.length) % projects.length;
+/* Show selected project */
+function showProject(project, direction = 'next') {
 
-    projects[current].classList.add('active');
-    count.textContent = `0${current + 1} / 0${projects.length}`;
+    if (isAnimating) return;
 
-    updateFilters();
+    isAnimating = true;
+
+    const activeProject = document.querySelector('.gallery-project.active');
+
+    if (activeProject) {
+        activeProject.classList.add(
+            direction === 'next'
+                ? 'slide-out'
+                : 'slide-out-reverse'
+        );
+    }
+
+    setTimeout(() => {
+
+        projects.forEach(item => {
+            item.classList.remove(
+                'active',
+                'slide-out',
+                'slide-out-reverse',
+                'slide-in',
+                'slide-in-reverse'
+            );
+        });
+
+        project.classList.add('active');
+
+        project.classList.add(
+            direction === 'next'
+                ? 'slide-in'
+                : 'slide-in-reverse'
+        );
+
+        setTimeout(() => {
+
+            project.classList.remove(
+                'slide-in',
+                'slide-in-reverse'
+            );
+
+            isAnimating = false;
+
+        }, 600);
+
+    }, 300);
 }
 
+
+/* Select project category */
+function selectCategory(category) {
+
+    if (isAnimating) return;
+
+    currentCategory = category;
+
+    if (category === 'all') {
+
+        filteredProjects = Array.from(projects);
+
+    } else {
+
+        filteredProjects = Array.from(projects).filter(
+            project =>
+                project.dataset.category === category
+        );
+    }
+
+    /* Do nothing if category has no projects */
+    if (filteredProjects.length === 0) {
+        return;
+    }
+
+    current = 0;
+
+    updateFilterButtons();
+    updateCounter();
+
+    showProject(filteredProjects[current]);
+}
+
+
+/* Move through carousel */
+function changeProject(direction) {
+
+    if (
+        isAnimating ||
+        filteredProjects.length <= 1
+    ) {
+        return;
+    }
+
+    current =
+        (current + direction + filteredProjects.length) %
+        filteredProjects.length;
+
+    updateCounter();
+
+    showProject(
+        filteredProjects[current],
+        direction > 0 ? 'next' : 'previous'
+    );
+}
+
+
+/* Category buttons */
+filters.forEach(filter => {
+
+    filter.addEventListener('click', () => {
+        selectCategory(filter.dataset.category);
+    });
+
+});
+
+
+/* Next button */
 next.addEventListener('click', () => {
-    showProject(current + 1);
+    changeProject(1);
 });
 
+
+/* Previous button */
 prev.addEventListener('click', () => {
-    showProject(current - 1);
+    changeProject(-1);
 });
 
-updateFilters();
-</script>
 
+/* Initial state */
+updateFilterButtons();
+updateCounter();
+
+
+/* Section scroll transitions */
+
+const gallerySections = document.querySelectorAll(
+    '.gallery-hero, .gallery-section, .about-closing'
+);
+
+const galleryObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add('show');
+
+            galleryObserver.unobserve(entry.target);
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+
+gallerySections.forEach(section => {
+    galleryObserver.observe(section);
+});
+</script>
 
 </body>
 </html>
