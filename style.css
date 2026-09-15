@@ -47,6 +47,7 @@ nav {
 nav a {
     font-size: 13px;
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 nav a:hover,
