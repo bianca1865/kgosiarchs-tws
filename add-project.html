@@ -8,11 +8,14 @@
 </head>
 
 <body class="admin-body">
+
     <!-- ================= SIDEBAR ================= -->
 
     <aside class="sidebar">
+
         <div class="admin-brand">
             <img src="images/kgosi-logo.png" alt="Kgosi Architects Logo">
+
             <div>
                 <h2>Kgosi Architects</h2>
                 <span>Admin Portal</span>
@@ -20,6 +23,7 @@
         </div>
 
         <nav class="admin-nav">
+
             <a href="dashboard.html">
                 <span>⌂</span>
                 Dashboard
@@ -29,16 +33,21 @@
                 <span>▣</span>
                 Projects
             </a>
+
             <a href="inquiries.html">
                 <span>✉</span>
                 Inquiries
             </a>
+
             <a href="settings.html">
                 <span>⚙</span>
                 Settings
             </a>
+
         </nav>
+
         <div class="sidebar-bottom">
+
             <a href="index.html">
                 <span>↗</span>
                 View Website
@@ -48,45 +57,75 @@
                 <span>⇥</span>
                 Logout
             </a>
+
         </div>
+
     </aside>
+
+
     <!-- ================= MAIN CONTENT ================= -->
+
     <main class="projects-main">
+
         <!-- ================= PAGE HEADER ================= -->
+
         <header class="projects-header">
+
             <div>
+
                 <p class="page-label">
                     PORTFOLIO MANAGEMENT
                 </p>
+
                 <h1>
                     Add Project
                 </h1>
+
                 <p class="projects-description">
                     Add a new architectural project to your portfolio.
                 </p>
+
             </div>
+
             <a href="projects.html" class="secondary-button">
                 ← Back to Projects
             </a>
+
         </header>
+
+
         <!-- ================= PROJECT FORM ================= -->
+
         <section class="project-form-card">
+
             <form action="#" method="POST" enctype="multipart/form-data">
-                <!-- ================= BASIC INFORMATION ================= -->
+
+
+                <!-- ================= PROJECT INFORMATION ================= -->
+
                 <div class="form-section">
+
                     <div class="form-section-heading">
+
                         <h2>
                             Project Information
                         </h2>
+
                         <p>
                             Enter the basic details of the architectural project.
                         </p>
+
                     </div>
+
+
                     <!-- PROJECT NAME -->
+
                     <div class="form-group">
+
                         <label for="projectName">
                             Project Name
                         </label>
+
                         <input
                             type="text"
                             id="projectName"
@@ -94,43 +133,63 @@
                             placeholder="e.g. Modern Family Residence"
                             required
                         >
+
                     </div>
-                    <!-- CATEGORY -->
+
+
+                    <!-- CATEGORY + YEAR -->
+
                     <div class="form-row">
+
                         <div class="form-group">
+
                             <label for="projectCategory">
                                 Category
                             </label>
+
                             <select
                                 id="projectCategory"
                                 name="projectCategory"
                                 required
                             >
+
                                 <option value="">
                                     Select category
                                 </option>
+
                                 <option value="residential">
                                     Residential
                                 </option>
+
                                 <option value="commercial">
                                     Commercial
                                 </option>
+
                                 <option value="industrial">
                                     Industrial
                                 </option>
+
                                 <option value="renovation">
                                     Renovation
                                 </option>
-                                <option value="renovation">
+
+                                <option value="hospitality">
                                     Hospitality
                                 </option>
+
                             </select>
+
                         </div>
+
+
                         <!-- YEAR -->
+
                         <div class="form-group">
+
                             <label for="projectYear">
                                 Year
                             </label>
+
                             <input
                                 type="number"
                                 id="projectYear"
@@ -140,13 +199,20 @@
                                 max="2100"
                                 required
                             >
+
                         </div>
+
                     </div>
+
+
                     <!-- LOCATION -->
+
                     <div class="form-group">
+
                         <label for="projectLocation">
                             Location
                         </label>
+
                         <input
                             type="text"
                             id="projectLocation"
@@ -154,116 +220,254 @@
                             placeholder="e.g. Gaborone, Botswana"
                             required
                         >
+
                     </div>
+
+
                     <!-- SHORT DESCRIPTION -->
+
                     <div class="form-group">
+
                         <label for="projectDescription">
                             Short Description
                         </label>
+
                         <textarea
                             id="projectDescription"
                             name="projectDescription"
                             rows="4"
                             placeholder="Briefly describe the project..."
+                            required
                         ></textarea>
+
                     </div>
+
                 </div>
-                <!-- ================= PROJECT IMAGE ================= -->
+
+
+                <!-- ================= PROJECT STORY ================= -->
+
                 <div class="form-section">
+
                     <div class="form-section-heading">
+
+                        <h2>
+                            Project Story
+                        </h2>
+
+                        <p>
+                            Describe the brief, challenge and result of the project.
+                        </p>
+
+                    </div>
+
+
+                    <!-- BRIEF -->
+
+                    <div class="form-group">
+
+                        <label for="projectBrief">
+                            Brief
+                        </label>
+
+                        <textarea
+                            id="projectBrief"
+                            name="projectBrief"
+                            rows="4"
+                            placeholder="What was the purpose or brief of the project?"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- CHALLENGE -->
+
+                    <div class="form-group">
+
+                        <label for="projectChallenge">
+                            Challenge
+                        </label>
+
+                        <textarea
+                            id="projectChallenge"
+                            name="projectChallenge"
+                            rows="4"
+                            placeholder="What design, site or functional challenge did the project address?"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- RESULT -->
+
+                    <div class="form-group">
+
+                        <label for="projectResult">
+                            Result
+                        </label>
+
+                        <textarea
+                            id="projectResult"
+                            name="projectResult"
+                            rows="4"
+                            placeholder="Describe the resulting architectural solution."
+                            required
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= PROJECT IMAGE ================= -->
+
+                <div class="form-section">
+
+                    <div class="form-section-heading">
+
                         <h2>
                             Project Image
                         </h2>
+
                         <p>
                             Upload the main image that will appear in your portfolio.
                         </p>
+
                     </div>
+
+
                     <div class="image-upload-area">
+
                         <label for="projectImage">
+
                             <div class="upload-icon">
                                 +
                             </div>
+
                             <h3>
                                 Upload Project Image
                             </h3>
+
                             <p>
                                 Click to choose an image from your computer
                             </p>
+
                             <span>
                                 JPG, JPEG or PNG
                             </span>
+
                         </label>
+
                         <input
                             type="file"
                             id="projectImage"
                             name="projectImage"
                             accept="image/png, image/jpeg"
+                            required
                         >
+
                     </div>
+
                 </div>
+
+
                 <!-- ================= PROJECT STATUS ================= -->
+
                 <div class="form-section">
 
                     <div class="form-section-heading">
+
                         <h2>
                             Publication
                         </h2>
+
                         <p>
-                        Choose whether the project should be visible on the website.
+                            Choose whether the project should be visible on the website.
                         </p>
+
                     </div>
+
+
                     <div class="status-options">
+
                         <label class="status-option">
+
                             <input
                                 type="radio"
                                 name="status"
                                 value="published"
                                 checked
                             >
+
                             <div>
+
                                 <strong>
                                     Published
                                 </strong>
+
                                 <span>
                                     Display this project on the public website.
                                 </span>
+
                             </div>
+
                         </label>
+
+
                         <label class="status-option">
+
                             <input
                                 type="radio"
                                 name="status"
                                 value="draft"
                             >
+
                             <div>
+
                                 <strong>
                                     Draft
                                 </strong>
+
                                 <span>
                                     Save the project without displaying it publicly.
                                 </span>
+
                             </div>
+
                         </label>
+
                     </div>
+
                 </div>
+
+
                 <!-- ================= FORM ACTIONS ================= -->
+
                 <div class="form-actions">
+
                     <a
                         href="projects.html"
                         class="cancel-button"
                     >
                         Cancel
                     </a>
+
                     <button
                         type="submit"
                         class="primary-button"
                     >
                         Save Project
                     </button>
+
                 </div>
+
             </form>
+
         </section>
+
     </main>
+
 </body>
 </html>
-

@@ -49,12 +49,17 @@
         <button class="filter" data-category="residential">Residential</button>
         <button class="filter" data-category="commercial">Commercial</button>
         <button class="filter" data-category="industrial">Industrial</button>
-        <button class="filter" data-category="hospitality">Renovation</button>
+        <button class="filter" data-category="renovation">Renovation</button>
         <button class="filter" data-category="hospitality">Hospitality</button>
         
     </div>
 
     <div class="project-carousel">
+
+        <div class="empty-projects">
+            <p class="section-label">COMING SOON</p>
+            <h2>Projects in this category<br>are coming soon.</h2>
+        </div>
 
         <article class="gallery-project active" data-category="residential">
 
@@ -228,6 +233,7 @@
 </footer>
 
 <script>
+const emptyProjects = document.querySelector('.empty-projects');
 const projects = document.querySelectorAll('.gallery-project');
 const filters = document.querySelectorAll('.filter');
 const next = document.querySelector('.next');
@@ -329,14 +335,32 @@ function selectCategory(category) {
         );
     }
 
-    /* Do nothing if category has no projects */
-    if (filteredProjects.length === 0) {
-        return;
-    }
-
     current = 0;
 
     updateFilterButtons();
+
+    /* Show empty state */
+    if (filteredProjects.length === 0) {
+
+        projects.forEach(item => {
+            item.classList.remove(
+                'active',
+                'slide-out',
+                'slide-out-reverse',
+                'slide-in',
+                'slide-in-reverse'
+            );
+        });
+
+        emptyProjects.classList.add('show');
+        count.textContent = '—';
+
+        return;
+    }
+
+    /* Hide empty state */
+    emptyProjects.classList.remove('show');
+
     updateCounter();
 
     showProject(filteredProjects[current]);
