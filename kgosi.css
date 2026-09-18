@@ -146,6 +146,11 @@ body {
     margin: 4px 0 0;
     text-transform: uppercase;
 }
+
+form > p {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
 /* =========================================
    LOGIN SECTION
    ========================================= */
