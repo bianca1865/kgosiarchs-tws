@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kgosi Architects - Dashboard</title>
+    <link rel="stylesheet" href="kgosi.css">
+</head>
+<body class="admin-body">
+    <!-- ==============================
+         SIDEBAR
+         ============================== -->
+    <aside class="sidebar">
+        <!-- Logo -->
+        <div class="admin-brand">
+            <img
+                src="images/kgosi-logo.png"
+                alt="Kgosi Architects Logo"
+            >
+            <div>
+                <h2>Kgosi Architects</h2>
+                <span>Admin Portal</span>
+            </div>
+        </div>
+        <!-- Navigation -->
+        <nav class="admin-nav">
+            <a href="dashboard.html" class="active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="projects.html">
+                <span>▣</span>
+                Projects
+            </a>
+            <a href="inquiries.html">
+                <span>✉</span>
+                Inquiries
+            </a>
+            <a href="settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+        </nav>
+
+        <!-- Bottom Navigation -->
+        <div class="sidebar-bottom">
+            <a href="index.html">
+                <span>↗</span>
+                View Website
+            </a>
+            <a href="login.html" class="logout">
+                <span>⇥</span>
+                Logout
+            </a>
+        </div>
+    </aside>
+    <!-- ==============================
+         MAIN CONTENT
+         ============================== -->
+    <main class="dashboard-main">
+
+        <!-- Top Bar -->
+        <header class="dashboard-header">
+            <div>
+                <p class="page-label">
+                    ADMIN DASHBOARD
+                </p>
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="admin-profile">
+                <div class="profile-icon">
+                    T
+                </div>
+                <div>
+                    <strong>Thato</strong>
+                    <span>Administrator</span>
+                </div>
+            </div>
+        </header>
+        <!-- Welcome -->
+        <section class="welcome-section">
+            <div>
+                <h2>
+                    Good morning, Thato.
+                </h2>
+                <p>
+                    Manage your projects and keep track of client enquiries.
+                </p>
+            </div>
+            <a href="add-project.html" class="primary-button">
+                + Add Project
+            </a>
+        </section>
+        <!-- ==============================
+             STATISTICS
+             ============================== -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    ▣
+                </div>
+                <div>
+                    <span>Total Projects</span>
+                    <h3>24</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    ✉
+                </div>
+                <div>
+                    <span>Total Inquiries</span>
+                    <h3>18</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon unread">
+                    !
+                </div>
+                <div>
+                    <span>Unread Inquiries</span>
+                    <h3>5</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             DASHBOARD CONTENT
+             ============================== -->
+        <section class="dashboard-grid">
+            <!-- Recent Projects -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <div>
+                        <span class="section-label">
+                            PORTFOLIO
+                        </span>
+                        <h2>
+                            Recent Projects
+                        </h2>
+                    </div>
+                    <a href="projects.html">
+                        View all
+                    </a>
+                </div>
+                <div class="project-list">
+                    <div class="project-row">
+                        <div class="project-image">
+                            <img
+                                src="images/project-placeholder.jpg"
+                                alt="Project"
+                            >
+                        </div>
+                        <div class="project-info">
+                            <h3>
+                                Modern Family Residence
+                            </h3>
+                            <p>
+                                Residential · 2026
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-row">
+                        <div class="project-image">
+                            <img
+                                src="images/project-placeholder.jpg"
+                                alt="Project"
+                            >
+                        </div>
+                        <div class="project-info">
+                            <h3>
+                                Gaborone Office Complex
+                            </h3>
+                            <p>
+                                Commercial · 2025
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-row">
+                        <div class="project-image">
+                            <img
+                                src="images/project-placeholder.jpg"
+                                alt="Project"
+                            >
+                        </div>
+                        <div class="project-info">
+                            <h3>
+                                Kgale Hill Residence
+                            </h3>
+                            <p>
+                                Residential · 2025
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Inquiries -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <div>
+                        <span class="section-label">
+                            CLIENTS
+                        </span>
+                        <h2>
+                            Recent Inquiries
+                        </h2>
+                    </div>
+                    <a href="inquiries.html">
+                        View all
+                    </a>
+                </div>
+
+                <div class="inquiry-list">
+                    <div class="inquiry-row">
+                        <div class="inquiry-avatar">
+                            J
+                        </div>
+                        <div class="inquiry-info">
+                            <h3>
+                                John Doe
+                            </h3>
+                            <p>Residential Project</p>
+                        </div>
+                        <span class="status new">
+                            New
+                        </span>
+                    </div>
+                    <div class="inquiry-row">
+                        <div class="inquiry-avatar">
+                            A
+                        </div>
+                        <div class="inquiry-info">
+                            <h3>ABC Company</h3>
+                            <p>  Commercial Project</p>
+                        </div>
+                        <span class="status read"> Read</span>
+                    </div>
+                    <div class="inquiry-row">
+                        <div class="inquiry-avatar">
+                            M
+                        </div>
+                        <div class="inquiry-info">
+                            <h3>Thato Kgosidintsi</h3>
+                            <p> Residential Project </p>
+                        </div>
+                        <span class="status new">
+                            New
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Kgosi Architects - Inquiries</title>
+    <link rel="stylesheet" href="kgosi.css">
+</head>
+<body class="admin-body">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+        <div class="admin-brand">
+            <img
+                src="images/kgosi-logo.png"
+                alt="Kgosi Architects Logo"
+            >
+            <div>
+                <h2>Kgosi Architects</h2>
+                <span>Admin Portal</span>
+            </div>
+        </div>
+        <!-- ================= NAVIGATION ================= -->
+        <nav class="admin-nav">
+            <a href="dashboard.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+            <a href="projects.html">
+                <span>▣</span>
+                Projects
+            </a>
+            <a href="inquiries.html" class="active">
+                <span>✉</span>
+                Inquiries
+            </a>
+            <a href="settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+        </nav>
+        <!-- ================= SIDEBAR BOTTOM ================= -->
+        <div class="sidebar-bottom">
+            <a href="index.html">
+                <span>↗</span>
+                View Website
+            </a>
+            <a href="login.html" class="logout">
+                <span>⇥</span>
+                Logout
+            </a>
+        </div>
+    </aside>
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="inquiries-main">
+        <!-- ================= PAGE HEADER ================= -->
+        <header class="inquiries-header">
+            <div>
+                <p class="page-label">
+                    CLIENT COMMUNICATION
+                </p>
+                <h1>
+                    Inquiries
+                </h1>
+                <p class="inquiries-description">
+                    View and manage inquiries submitted by
+                    potential clients.
+                </p>
+            </div>
+        </header>
+        <!-- ================= SUMMARY ================= -->
+        <section class="inquiry-summary">
+            <div class="inquiry-summary-card">
+                <div class="summary-icon">
+                    ✉
+                </div>
+                <div>
+                    <strong>18</strong>
+                    <span>Total Inquiries</span>
+                </div>
+            </div>
+            <div class="inquiry-summary-card">
+                <div class="summary-icon unread-icon">
+                    ●
+                </div>
+                <div>
+                    <strong>5</strong>
+                    <span>Unread</span>
+                </div>
+            </div>
+            <div class="inquiry-summary-card">
+                <div class="summary-icon replied-icon">
+                    ✓
+                </div>
+                <div>
+                    <strong>12</strong>
+                    <span>Replied</span>
+                </div>
+            </div>
+        </section>
+        <!-- ================= CONTROLS ================= -->
+        <section class="inquiry-controls">
+            <div class="inquiry-search">
+                <label for="searchInquiry">
+                    Search Inquiries
+                </label>
+                <input
+                    type="search"
+                    id="searchInquiry"
+                    placeholder="Search by name or subject..."
+                >
+            </div>
+            <div class="inquiry-filter">
+                <label for="inquiryStatus">
+                    Status
+                </label>
+                <select id="inquiryStatus">
+                    <option value="all">
+                        All Inquiries
+                    </option>
+                    <option value="unread">
+                        Unread
+                    </option>
+                    <option value="read">
+                        Read
+                    </option>
+                    <option value="replied">
+                        Replied
+                    </option>
+                </select>
+            </div>
+        </section>
+        <!-- ================= INQUIRY TABLE ================= -->
+        <section class="inquiries-card">
+            <div class="inquiries-table-wrapper">
+                <table class="inquiries-table">
+                    <thead>
+                        <tr>
+                            <th>Client</th>
+                            <th>Subject</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- ================= INQUIRY 1 ================= -->
+                        <tr class="unread-row">
+                            <td>
+                                <div class="inquiry-client">
+                                    <div class="client-avatar">
+                                        KM
+                                    </div>
+                                    <div>
+                                        <h3>
+                                            Kabelo Molefe
+                                        </h3>
+                                        <span>
+                                            kabelo@example.com
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inquiry-subject">
+                                    <strong>
+                                        Residential House Design
+                                    </strong>
+
+                                    <span>
+                                        I would like to discuss...
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                13 Sep 2026
+                            </td>
+                            <td>
+                                <span class="inquiry-status unread">
+                                    Unread
+                                </span>
+                            </td>
+                            <td>
+                                <a
+                                    href="#"
+                                    class="view-inquiry-button"
+                                >
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        <!-- ================= INQUIRY 2 ================= -->
+                        <tr>
+                            <td>
+                                <div class="inquiry-client">
+                                    <div class="client-avatar">
+                                        TN
+                                    </div>
+
+                                    <div>
+                                        <h3>
+                                            Thato Nkosi
+                                        </h3>
+                                        <span>
+                                            thato@example.com
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inquiry-subject">
+                                    <strong>
+                                        Commercial Building
+                                    </strong>
+                                    <span>
+                                        We are interested in...
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                12 Sep 2026
+                            </td>
+                            <td>
+                                <span class="inquiry-status replied">
+                                    Replied
+                                </span>
+                            </td>
+                            <td>
+                                <a
+                                    href="#"
+                                    class="view-inquiry-button"
+                                >
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        <!-- ================= INQUIRY 3 ================= -->
+                        <tr class="unread-row">
+                            <td>
+                                <div class="inquiry-client">
+                                    <div class="client-avatar">
+                                        LM
+                                    </div>
+                                    <div>
+                                        <h3>
+                                            Lesego Motswana
+                                        </h3>
+                                        <span>
+                                            lesego@example.com
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inquiry-subject">
+                                    <strong>
+                                        Renovation Project
+                                    </strong>
+                                    <span>
+                                        I would like a quotation...
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                11 Sep 2026
+                            </td>
+                            <td>
+                                <span class="inquiry-status unread">
+                                    Unread
+                                </span>
+                            </td>
+                            <td>
+                                <a
+                                    href="#"
+                                    class="view-inquiry-button"
+                                >
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        <!-- ================= INQUIRY 4 ================= -->
+                        <tr>
+                            <td>
+                                <div class="inquiry-client">
+                                    <div class="client-avatar">
+                                        OG
+                                    </div>
+                                    <div>
+                                        <h3>
+                                            Otsile Gaborone
+                                        </h3>
+                                        <span>
+                                            otsile@example.com
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inquiry-subject">
+                                    <strong>
+                                        Office Development
+                                    </strong>
+
+                                    <span>
+                                        We need architectural services...
+                                    </span>
+
+                                </div>
+                            </td>
+                            <td>
+                                10 Sep 2026
+                            </td>
+                            <td>
+                                <span class="inquiry-status replied">
+                                    Replied
+                                </span>
+                            </td>
+                            <td>
+                                <a
+                                    href="#"
+                                    class="view-inquiry-button"
+                                >
+                                View
+                            </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

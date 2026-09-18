@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kgosi Architects - Login</title>
+    <link rel="stylesheet" href="kgosi.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="login-header">
+    <a href="index.html" class="brand">
+        <img
+            src="images/kgosi-logo.png"
+            alt="Kgosi Architects Logo"
+        >
+        <div class="brand-text">
+            <h1>Kgosi Architects</h1>
+            <p>Great Future Building</p>
+
+        </div>
+    </a>
+</header>
+    <!-- LOGIN -->
+    <main>
+        <form onsubmit="loginUser(event)">
+            <h2>Welcome Back</h2>
+
+            <p>
+                Sign in to continue to Kgosi Architects.
+            </p>
+            <!-- EMAIL -->
+            <label for="email">
+                Email Address
+            </label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+            <br><br>
+            <!-- PASSWORD -->
+            <label for="password">
+                Password
+            </label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+            >
+            <br><br>
+            <!-- ACCOUNT TYPE -->
+            <label for="userType">
+                Login As
+            </label>
+            <select id="userType" required>
+                <option value="">
+                    Select account type
+                </option>
+                <option value="admin">
+                    Admin
+                </option>
+                <option value="client">
+                    Client
+                </option>
+            </select>
+            <!-- NORMAL LOGIN -->
+            <button type="submit">
+                Sign In
+            </button>
+            <!-- DIVIDER -->
+            <div class="divider">
+                <span>OR</span>
+            </div>
+            <!-- GOOGLE -->
+            <button
+                type="button"
+                class="google-login"
+                onclick="googleLogin()"
+            >
+                <img
+                    src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                    alt="Google"
+                >
+                Continue with Google
+            </button>
+        </form>
+        <!-- ERROR MESSAGE -->
+        <p id="message"></p>
+        <!-- VISITOR -->
+        <a
+            href="index.html"
+            class="visitor-link"
+        >
+            Continue as a visitor
+        </a>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Kgosi Architects.
+        All rights reserved.
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script>
+        function loginUser(event) {
+            event.preventDefault();
+            const userType =
+                document.getElementById("userType").value;
+            if (userType === "admin") {
+                window.location.href = "dashboard.html";
+            }
+            else if (userType === "client") {
+                window.location.href = "index.html";
+            }
+            else {
+                document.getElementById("message").textContent =
+                    "Please select an account type.";
+            }
+        }
+        function googleLogin() {
+
+            alert(
+                "Google Sign-In will be connected when authentication is added."
+            );
+
+        }
+    </script>
+</body>
+</html>
+
